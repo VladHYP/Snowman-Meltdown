@@ -7,8 +7,53 @@ display_word = ["_"] * len(secret_word)
 wrong_guesses = 0
 max_wrong = 6
 
-while "_" in display_word and wrong_guesses < max_wrong:
+snowman_stages = [
+    """
+     _===_
+    (.,.)
+    ( : )
+    ( : )
+    """,
+    """
+     
+    (.,.)
+    ( : )
+    ( : )
+    """,
+    """
+     
+    (.,.)
+    ( : )
+     
+    """,
+    """
+     
+    (.,.)
+     
+     
+    """,
+    """
+     
+     
+     
+     
+    """,
+    """
+     
+     
+     
+     
+    """,
+    """
+     
+     
+     
+     
+    """
+]
 
+while "_" in display_word and wrong_guesses < max_wrong:
+    print(snowman_stages[wrong_guesses])
     print("Word:", " ".join(display_word))
     print("Wrong guesses:", wrong_guesses)
 
@@ -25,5 +70,5 @@ while "_" in display_word and wrong_guesses < max_wrong:
 if "_" not in display_word:
     print("You won! The word was:", secret_word)
 else:
+    print(snowman_stages[wrong_guesses])
     print("The snowman melted! The word was:", secret_word)
-    
