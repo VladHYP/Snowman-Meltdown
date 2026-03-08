@@ -6,3 +6,6 @@ secret_word = random.choice(words)
 display_word = ["_"] * len(secret_word)
 
 print("Word:", " ".join(display_word))
+
+guess = input("Guess a letter: ")
+print("You guessed:", guess)
